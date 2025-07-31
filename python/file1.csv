@@ -1,0 +1,15 @@
+n=int(input("n: "))
+res=[]
+for i in range(n):
+    val=input(f"val {i+1}:")
+    try:
+        res.append(int(val))
+    except:
+        try:
+            res.apppend(float(val))
+        except:
+            try:
+                res.append(complex(val))
+            except:
+                res.append(val)
+print(res)                                
